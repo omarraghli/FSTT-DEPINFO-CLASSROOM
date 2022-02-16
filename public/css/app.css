@@ -1,0 +1,417 @@
+/* Used for styling link elements in the navigation */
+.white {
+  color: white; }
+
+.white:hover {
+  color: white; }
+
+.pleft-15 {
+  padding-left: 15px; }
+
+/*# sourceMappingURL=app.css.map */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+
+/*-------------Reset-------------*/
+button {
+  background: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:focus,
+input:focus {
+  outline: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*-------------Layout-------------*/
+body {
+  line-height: 1.5em;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  height: 100vh;
+}
+
+#home {
+  background-color: white;
+  margin-top: -620px;
+}
+
+#about {
+  background-color: #aaa;
+}
+
+#work {
+  background-color: #888;
+}
+
+#contact {
+  background-color: #666;
+}
+.btnD{
+  margin: 4px auto 0;
+  display: inline-block;
+  font-size: 1.15em;
+  position: relative;
+  text-align: center;
+  padding: 0.5em 1em;
+  background: linear-gradient(45deg, #59adeb, #40c3af);
+  color: #fff;
+  box-shadow: 0 0.2em 0.2em rgba(0,0,0,0.25);
+  border-radius: 0.2em;
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btnD:hover {
+  box-shadow: 0 0.1em 0.25em rgba(0,0,0,0.25);
+}
+
+.active{
+  margin-right: 20px;
+}
+
+/*-------------Helpers-------------*/
+.skew {
+  transform: skew(-20deg);
+}
+
+.un-skew {
+  transform: skew(20deg);
+}
+
+/*-------------Nav-------------*/
+#nav-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#nav {
+  background-color: rgb(241, 236, 236);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  font-family: "Saira Semi Condensed", sans-serif;
+  height: 4em;
+  overflow: hidden;
+}
+#nav.nav-visible {
+  height: 100%;
+  overflow: auto;
+}
+
+.nav {
+  display: flex;
+  height: 4em;
+  line-height: 4em;
+  flex-grow: 1;
+}
+
+.nav-link,
+.logo {
+  padding: 0 2em;
+}
+
+span.gradient {
+  background: #2e8be2;
+  background: -webkit-linear-gradient(45deg, #2e8be2, #2e8be2);
+  background: linear-gradient(45deg, #2e8be2, #2e8be2);
+  padding: 0 1em;
+  position: relative;
+  right: 1em;
+  margin-right: auto;
+}
+span.gradient:hover {
+  animation-name: logo-hover;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.17, 0.57, 0.31, 0.85);
+}
+
+h1.logo {
+  font-weight: 300;
+  font-size: 1.75em;
+  line-height: 0.75em;
+  color: #fff;
+}
+
+h1.logo a, a:active, a:hover, a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 0.5px solid #ddd;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: #2e8be2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.btn-nav {
+  color: #2e8be2;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+@media (min-width: 800px) {
+  #nav-wrapper {
+    overflow: hidden;
+  }
+
+  #nav {
+    overflow: hidden;
+    flex-direction: row;
+  }
+
+  .nav-link {
+    border-top: none;
+  }
+
+  .right {
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    left: 1.5em;
+    height: auto;
+  }
+
+  .btn-nav {
+    display: none;
+  }
+
+  .nav a:link.active, a:visited.active, a:active.active {
+    background: #2e8be2;
+    background: -webkit-linear-gradient(45deg, #2e8be2,#2e8be2);
+    background: linear-gradient(45deg, #2e8be2, #2e8be2);
+    color: #fff;
+  }
+
+  .nav-link-span {
+    transform: skew(20deg);
+    display: inline-block;
+  }
+
+  .nav-link {
+    transform: skew(-20deg);
+    color: #777;
+    text-decoration: none;
+  }
+  .nav-link:last-child {
+    padding-right: 3em;
+  }
+
+  a:hover.nav-link:not(.active) {
+    color: #444;
+    background: #ddd;
+    background: linear-gradient(45deg, #fff, #ddd);
+  }
+}
+@keyframes logo-hover {
+  20% {
+    padding-right: 0em;
+  }
+  100% {
+    padding-right: 5em;
+  }
+}
+
+
+
+
+.button-36 {
+  background-color:#2e8be2 ;
+
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  font-weight: 500;
+  height: 50px;
+  width: 200px;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-36:hover {
+  box-shadow: #2e8be2 0 1px 30px;
+  transition-duration: .1s;
+}
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+
+/* Variables */
+/* Styles */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+
+body .holder, html .holder {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  margin-left: 230px;
+  margin-top: -260px;
+}
+.holder .avatar, html .holder .avatar {
+  margin: 25px auto;
+}
+.holder .avatar img.user, html .holder .avatar img.user {
+  height: 80px;
+  width: 80px;
+  background-color: #FE4321;
+  box-shadow: 0 0 0 5px #FE4321;
+  border-radius: 50%;
+}
+.holder .avatar img.user:hover, html .holder .avatar img.user:hover {
+  cursor: pointer;
+  animation: bounceOut .4s linear;
+}
+
+@keyframes bounceOut {
+  0% {
+    box-shadow: 0 0 0 4px #FE4321;
+    opacity: 1;
+  }
+  25% {
+    box-shadow: 0 0 0 1px #FE4321;
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 7px #FE4321;
+    opacity: 1;
+  }
+  75% {
+    box-shadow: 0 0 0 4px #FE4321;
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 5px #FE4321;
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: ‘Varela Round’, sans-serif;
+  }
+  .modal-login {
+  color: #636363;
+  width: 350px;
+  }
+  .modal-login .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  }
+  .modal-login .modal-header {
+  border-bottom: none;
+  position: relative;
+  justify-content: center;
+  }
+  .modal-login h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 30px 0 -15px;
+  }
+  .modal-login .form-control:focus {
+  border-color: #70c5c0;
+  }
+  .modal-login .form-control, .modal-login .btn {
+  min-height: 40px;
+  border-radius: 3px;
+  }
+  .modal-login .close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  }
+  .modal-login .modal-footer {
+  background: #ecf0f1;
+  border-color: #dee4e7;
+  text-align: center;
+  justify-content: center;
+  margin: 0 -20px -20px;
+  border-radius: 5px;
+  font-size: 13px;
+  }
+  .modal-login .modal-footer a {
+  color: #999;
+  }
+  .modal-login .avatar {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -70px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #FE4321;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  .modal-login .avatar img {
+  width: 100%;
+  }
+  .modal-login.modal-dialog {
+  margin-top: 80px;
+  }
+  .modal-login .btn {
+  color: #fff;
+  border-radius: 4px;
+  background: #FE4321;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  border: none;
+  }
+  .modal-login .btn:hover, .modal-login .btn:focus {
+  background: #FE4321;
+  outline: none;
+  }
+  .trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+  color:#FE4321;
+  font-size:30px;
+  }
+
+  
